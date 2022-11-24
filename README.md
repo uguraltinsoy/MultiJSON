@@ -1,12 +1,12 @@
 # Android MultiJSON
 
 ### AndroidManifest
-```
+```xml
  <uses-permission android:name="android.permission.INTERNET"/>
 ```
 ## Download
 ### Build Gradle
-```
+```css
 allprojects {
 	repositories {
 		...
@@ -14,9 +14,9 @@ allprojects {
 	}
 }
 ```
-```
+```css
 dependencies {
-	
+	implementation 'com.github.uguraltinsoy:MultiJSON:1.0.0'
 }
 ```
 ## Usage Java - Kotlin
