@@ -16,7 +16,7 @@ allprojects {
 ```
 ```css
 dependencies {
-	implementation 'com.github.uguraltinsoy:MultiJSON:1.0.1'
+	implementation 'com.github.uguraltinsoy:MultiJSON:1.0.2'
 }
 ```
 ## Usage Java - Kotlin
