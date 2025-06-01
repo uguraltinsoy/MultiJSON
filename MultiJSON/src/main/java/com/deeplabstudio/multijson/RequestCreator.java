@@ -129,12 +129,17 @@ public class RequestCreator {
                 try {
                     StringBuilder result = new StringBuilder();
                     HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
+                    conn.setDoOutput(true);
+                    conn.setDoInput(true);
+
                     if (requestProperty.size() > 0) {
                         requestProperty.forEach((key, value) -> {
                             conn.setRequestProperty(key, value);
                         });
                     }
+
                     if (POST) conn.setRequestMethod("POST");
+
                     InputStream in = new BufferedInputStream(conn.getInputStream());
                     BufferedReader reader = new BufferedReader(new InputStreamReader(in));
                     String inputLine;
@@ -158,13 +163,14 @@ public class RequestCreator {
                 try {
                     StringBuilder result = new StringBuilder();
                     HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
+                    conn.setDoOutput(true);
+                    conn.setDoInput(true);
+
                     if (requestProperty.size() > 0) {
                         requestProperty.forEach((key, value) -> {
                             conn.setRequestProperty(key, value);
                         });
                     }
-                    conn.setDoOutput(true);
-                    conn.setDoInput(true);
                     if (POST) conn.setRequestMethod("POST");
 
                     OutputStream os = conn.getOutputStream();
@@ -194,6 +200,9 @@ public class RequestCreator {
                 try {
                     StringBuilder result = new StringBuilder();
                     HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
+                    conn.setDoOutput(true);
+                    conn.setDoInput(true);
+
                     if (requestProperty.size() > 0) {
                         requestProperty.forEach((key, value) -> {
                             conn.setRequestProperty(key, value);
@@ -230,6 +239,9 @@ public class RequestCreator {
                 try {
                     StringBuilder result = new StringBuilder();
                     HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
+                    conn.setDoOutput(true);
+                    conn.setDoInput(true);
+
                     if (requestProperty.size() > 0) {
                         requestProperty.forEach((key, value) -> {
                             conn.setRequestProperty(key, value);
@@ -260,13 +272,15 @@ public class RequestCreator {
                 try {
                     StringBuilder result = new StringBuilder();
                     HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
+                    conn.setDoOutput(true);
+                    conn.setDoInput(true);
+
                     if (requestProperty.size() > 0) {
                         requestProperty.forEach((key, value) -> {
                             conn.setRequestProperty(key, value);
                         });
                     }
-                    conn.setDoOutput(true);
-                    conn.setDoInput(true);
+
                     if (POST) conn.setRequestMethod("POST");
 
                     OutputStream os = conn.getOutputStream();
@@ -296,13 +310,15 @@ public class RequestCreator {
                 try {
                     StringBuilder result = new StringBuilder();
                     HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
+                    conn.setDoOutput(true);
+                    conn.setDoInput(true);
+
                     if (requestProperty.size() > 0) {
                         requestProperty.forEach((key, value) -> {
                             conn.setRequestProperty(key, value);
                         });
                     }
-                    conn.setDoOutput(true);
-                    conn.setDoInput(true);
+
                     if (POST) conn.setRequestMethod("POST");
 
                     OutputStream os = conn.getOutputStream();
